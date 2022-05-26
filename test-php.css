@@ -1,0 +1,445 @@
+@charset "utf-8";
+/* 全画面 */
+#wrapper {
+    text-align: center;
+    background-color: #EFEFEF;
+}
+
+#header {
+    display: flow-root;
+    height: 100px;
+}
+
+h1 {
+    color: #F0C61A;
+    line-height: 100px;
+    padding-left: 60px;
+}
+
+h2 {
+    text-align: center;
+    background-color: #F0C61A;
+    color: #FFFF;
+    line-height: 70px;
+}
+
+
+/* ショップ一覧 */
+.shop-list img {
+    width: 100px;
+    height: 100px;
+    padding-top: 10px;
+}
+
+h1.cocoto-mall {
+    text-align: center;
+    color: #F0C61A;
+}
+
+h2.welcome {
+    text-align: center;
+    background-color: #F0C61A;
+    color: #FFFF;
+}
+
+.shop-list {
+    padding-left: 40%;
+    width: 20%;
+    text-align: center;
+}
+
+.shop-list-position {
+    float: left;
+    width: 50%;
+}
+
+.shop-link-text {
+    color: #F25C05;
+}
+
+
+
+/*ログイン画面*/
+.login-title {
+    background-color: #F0C61A;
+}
+
+.login {
+    background-color: #efefef;
+    width: 280px;
+    height: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-main {
+    text-align: center;
+}
+
+.log-id {
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+.back-icon {
+    position: relative;
+    float: right;
+    bottom: 16px;
+    width: 100px;
+    padding-right: 10px;
+}
+
+.log-bnt {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    padding: 8px 20px 8px 20px;
+    background: #F25C05;
+    color: #ffffff;
+    line-height: 1em;
+    transition: .3s;
+    border: none;
+}
+
+
+
+/* ショップトップ画面 */
+h1.shop-title {
+    color: #F0C61A;
+    line-height: 50px;
+    padding: 0 30% 0 60px;
+    float: left;
+}
+
+.shop-information-title {
+    text-align: initial;
+    background-color: #F0C61A;
+}
+
+a {
+    text-decoration: none;
+}
+
+.shop-img {
+    width: 200px;
+    height: 200px;
+}
+
+.shop-information-message {
+    position: relative;
+    top: 5px;
+    text-align: left;
+}
+
+.view {
+    height: 200px;
+    width: 200px;
+}
+
+.product-box {
+    border-radius: 15px;
+    margin-bottom: 16px;
+   
+}
+
+.left-icon {
+    float: right;
+    position: relative;
+    top: -96px;
+}
+
+.product-url {
+    height: 300px;
+    width: 300px;
+    float: left;
+    margin: auto;
+    
+}
+
+.product-box-list {
+    display: inline-block;
+    padding: 30px;
+}
+
+.product-list-position {
+    width: 55%;
+    margin: auto;
+}
+
+.product-list-add {
+    display: inline-block;
+    border-radius: 10%;
+    text-align: center;
+    cursor: pointer;
+    padding: 12px 12px;
+    background: #F25C05;
+    color: #ffffff;
+    line-height: 1em;
+    transition: .3s;
+    margin: 20px;
+}
+
+#change_product {
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 40px 5px 40px;
+    background: #F25C05;
+    color: #ffffff;
+    transition: .3s;
+    border: none;
+    margin-left: 10px;
+}
+
+.owner-bnt {
+    display: inline-flex;
+}
+
+.left-icon img{
+    float: revert;
+    width: 100px;
+    height: 76px;
+}
+
+.logout-btn {
+    float: revert;
+    width: 100px;
+    height: 76px;
+    background-image: url(./images/admin_logout.png);
+    background-size: contain;
+    border: none;
+}
+
+.logout-btn-position {
+    display: inline-block;
+}
+
+.shop-info {
+    display: inline-flex;
+}
+
+.owner-info {
+    padding-left: 20px;
+    text-align: left;
+}
+
+.owner-name {
+    font-size: X-large;
+    color: #F0C61A;
+    margin-bottom: 0;
+    padding-left: 40px;
+}
+
+.owner-list {
+    list-style: none;
+}
+
+.product-box img {
+    width: 300px;
+    height: 200px;
+}
+
+/* 商品追加画面 -------------------------------------------------------------------------*/
+.itemList {
+    width: 100%;
+    display: flex;
+}
+.priceAddLeftIcon {
+    float: right;
+    position: relative;
+    top: -16px;
+}
+.priceAddLeftIcon img {
+    float: revert;
+    width: 100px;
+    height: 76px;
+}
+.upload-product-description input:not(:placeholder-shown) {
+    pointer-events: auto;
+}
+/*左側画像アップロード*/
+.upload-product-img {
+    padding: 20px;
+    width: 60%;
+}
+#output {
+    background-color: #FFFFFF;
+    width: 90%;
+    height: 340px;
+}
+
+.upload-product-description {
+    width: 40%;
+}
+/*「画像をアップロードする」ボタン*/
+.upload-product-img label {
+    display: inline-block;
+    border-radius: 8%;
+    font-size: 10pt;
+    text-align: center;
+    cursor: pointer;
+    padding: 12px 12px;
+    background: #F25C05;
+    color: #ffffff;
+    line-height: 1em;
+    transition: .3s;
+    box-shadow: 6px 6px 3px #666666;
+}
+.note {
+    margin-top: 10px;
+}
+/*右側　商品名、詳細、値段*/
+.upload-product-description {
+    margin: 20px;
+}
+.productName {
+    text-align: left;
+}
+#product_name {
+    width: 360px;
+    height: 60px;
+}
+/*詳細*/
+.detail {
+    text-align: left;
+}
+#product_overview {
+    width: 360px;
+}
+/*値段*/
+.price {
+    display: flex;
+    text-align: left;
+    margin-top: 16px;
+}
+#product_price {
+    width: 316px;
+    margin-left: 10px;
+}
+/*商品を追加するボタン*/
+.submitBtnArea {
+    background: #FFFFFF;
+    padding: 20px 0;
+}
+#addGoods {
+    display: inline-block;
+    border-radius: 8%;
+    font-size: 10pt;
+    text-align: center;
+    cursor: pointer;
+    padding: 12px 12px;
+    background: #F25C05;
+    color: #ffffff;
+    line-height: 1em;
+    transition: .3s;
+    box-shadow: 6px 6px 3px #666666;
+}
+/*--------------------------------------------------------------------------------*/
+
+/*購入完了画面（ユーザ）---------------------------------------------------------------*/
+.main {
+    margin-top: 60px;
+}
+.finish {
+    background: #EFEFEF;
+    height: 280px;
+    width: 460px;
+    margin: 0 auto;
+}
+.PurchaseCompletedText {
+    text-align: center;
+    font-size: 20px;
+    padding: 120px 0;
+}
+
+/*----------------------------------------------------------------------------------*/
+
+/* 商品詳細画面 ----------------------------------------------------------------------*/
+
+/*ショップトップへ戻るボタン*/
+.right-icon {
+    float: right;
+    position: relative;
+    top: -16px;
+}
+.right-icon img {
+    float: revert;
+    width: 100px;
+    height: 76px;
+}
+/*商品詳細*/
+.productdetailList {
+    display: flex;
+}
+/*商品画像*/
+.product-details-left {
+    margin: 0 20px;
+    width: 50%;
+}
+.product-details img {
+    width: 360px;
+    height: 250px;
+    float: right;
+}
+/*商品の説明*/
+.product-details-right {
+    margin: 0 20px;
+    width: 25%;
+}
+.product-details-right h3 {
+    text-align: left;
+    margin-bottom: 0;
+}
+/*商品価格*/
+.productPrice {
+    margin-top: 0px;
+    text-align: right;
+    color: #BF2C2C;
+}
+/*累計販売数*/
+.numberOfSale {
+    text-align: right;
+}
+.numberOfSale span {
+    font-weight: bold;
+}
+/*商品詳細*/
+.productDetail {
+    text-align: left;
+}
+/*コメント*/
+.comment-details {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 560px;
+    border-radius: 8%;
+    background-color: #F2EEB3;
+    box-shadow: 6px 6px 3px #666666;
+    border-radius: 15px;
+}
+.comment-list {
+    padding: 20px 0;
+}
+.commentArea {
+    padding: 5px 30px;
+}
+.commentArea ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+}
+.commentArea li {
+    width: 50%;
+}
+.commentBody {
+    text-align: left;
+}
+.commentName {
+    color: #F2B705;
+    text-align: left;
+}
+.commentData {
+    text-align: right;
+}
+/*---------------------------------------------------------------------------------*/

@@ -7,11 +7,11 @@
 
 #header {
     display: flow-root;
-    height: 100px;
 }
 
 h1 {
     color: #F0C61A;
+    text-align: left;
     line-height: 100px;
     padding-left: 60px;
 }
@@ -26,9 +26,8 @@ h2 {
 
 /* ショップ一覧 */
 .shop-list img {
-    width: 100px;
-    height: 100px;
-    padding-top: 10px;
+    width: 300px;
+    height: 300px;
 }
 
 h1.cocoto-mall {
@@ -42,15 +41,21 @@ h2.welcome {
     color: #FFFF;
 }
 
-.shop-list {
-    padding-left: 40%;
-    width: 20%;
-    text-align: center;
+.shop-list-background {
+    background-color: #FFFF;
+    padding: 10px;
+    margin: 20px;
 }
 
 .shop-list-position {
     float: left;
-    width: 50%;
+    margin-top: 50px;
+}
+
+.shop-list {
+    padding-left: 25%;
+    width: 60%;
+    text-align: center;
 }
 
 .shop-link-text {
@@ -64,8 +69,13 @@ h2.welcome {
     background-color: #F0C61A;
 }
 
+.login-error-message {
+    color: #FF0000;
+    font-weight: bold;
+}
+
 .login {
-    background-color: #efefef;
+    background-color: #FFFFFF;
     width: 280px;
     height: 220px;
     margin-left: auto;
@@ -82,7 +92,6 @@ h2.welcome {
 }
 
 .back-icon {
-    position: relative;
     float: right;
     bottom: 16px;
     width: 100px;
@@ -99,21 +108,22 @@ h2.welcome {
     line-height: 1em;
     transition: .3s;
     border: none;
+    box-shadow: 6px 6px 3px #666666;
 }
 
 
 
 /* ショップトップ画面 */
 h1.shop-title {
+    position: absolute;
     color: #F0C61A;
-    line-height: 50px;
     padding: 0 30% 0 60px;
     float: left;
 }
 
-.shop-information-title {
-    text-align: initial;
-    background-color: #F0C61A;
+#shop-top-header {
+    display: flow-root;
+    height: 120px;
 }
 
 a {
@@ -127,8 +137,9 @@ a {
 
 .shop-information-message {
     position: relative;
-    top: 5px;
+    top: 30px;
     text-align: left;
+    padding-left: 50%;
 }
 
 .view {
@@ -145,7 +156,7 @@ a {
 .left-icon {
     float: right;
     position: relative;
-    top: -96px;
+    top: -80px;
 }
 
 .product-url {
@@ -158,27 +169,32 @@ a {
 
 .product-box-list {
     display: inline-block;
-    padding: 30px;
+    padding: 20px 20px 50px;
+    background-color: #FFFF;
+    margin: 20px;
+    box-shadow: 2px 2px 10px #666666;
 }
 
 .product-list-position {
-    width: 55%;
+    width: 70%;
     margin: auto;
 }
 
 .product-list-add {
     display: inline-block;
-    border-radius: 10%;
-    text-align: center;
+    border-radius: 0.2cm;
+    /* text-align: center; */
     cursor: pointer;
     padding: 12px 12px;
     background: #F25C05;
-    color: #ffffff;
     line-height: 1em;
     transition: .3s;
     margin: 20px;
+    box-shadow: 6px 6px 3px #666666;
 }
-
+.product-list-add a {
+    color: #ffffff;
+}
 #change_product {
     display: inline-block;
     border-radius: 10px;
@@ -190,6 +206,7 @@ a {
     transition: .3s;
     border: none;
     margin-left: 10px;
+    box-shadow: 6px 6px 3px #666666;
 }
 
 .owner-bnt {
@@ -240,12 +257,15 @@ a {
     height: 200px;
 }
 
-/* 商品追加画面 -------------------------------------------------------------------------*/
+/* 商品追加画面(商品編集画面と共通) -------------------------------------------------------------------------*/
+.headerLine {
+    background: #F0C61A;
+}
 .itemList {
     width: 100%;
     display: flex;
 }
-.priceAddLeftIcon {
+.priceAddRightIcon {
     float: right;
     position: relative;
     top: -16px;
@@ -263,19 +283,15 @@ a {
     padding: 20px;
     width: 60%;
 }
-#output {
+.upload-product-img p img {
     background-color: #FFFFFF;
-    width: 90%;
-    height: 340px;
-}
-
-.upload-product-description {
-    width: 40%;
+    width: 80%;
+    height: 460px;
 }
 /*「画像をアップロードする」ボタン*/
 .upload-product-img label {
     display: inline-block;
-    border-radius: 8%;
+    border-radius: 8px;
     font-size: 10pt;
     text-align: center;
     cursor: pointer;
@@ -286,46 +302,54 @@ a {
     transition: .3s;
     box-shadow: 6px 6px 3px #666666;
 }
-.note {
-    margin-top: 10px;
-}
 /*右側　商品名、詳細、値段*/
 .upload-product-description {
+    width: 40%;
     margin: 20px;
 }
 .productName {
     text-align: left;
+    width: 80%;
 }
-#product_name {
-    width: 360px;
+.productName input {
+    width: 100%;
     height: 60px;
 }
 /*詳細*/
 .detail {
+    width: 80%;
     text-align: left;
 }
-#product_overview {
-    width: 360px;
+.detail textarea {
+    width: 100%;
 }
 /*値段*/
 .price {
+    width: 80%;
     display: flex;
     text-align: left;
     margin-top: 16px;
 }
-#product_price {
-    width: 316px;
-    margin-left: 10px;
+.priceTextArea {
+    margin: 0 auto;
+    width: 15%;
+}
+.priceArea {
+    width: 85%;
+}
+.priceArea input {
+    width: 100%;
+    height: 100%;
 }
 /*商品を追加するボタン*/
 .submitBtnArea {
-    background: #FFFFFF;
     padding: 20px 0;
 }
-#addGoods {
+.submitBtnArea input {
     display: inline-block;
-    border-radius: 8%;
-    font-size: 10pt;
+    border-radius: 8px;
+    border: none;
+    font-size: 14pt;
     text-align: center;
     cursor: pointer;
     padding: 12px 12px;
@@ -335,41 +359,57 @@ a {
     transition: .3s;
     box-shadow: 6px 6px 3px #666666;
 }
+/*注意文言*/
+.alertText {
+    color: #FF0000;
+    font-weight: bold;
+}
 /*--------------------------------------------------------------------------------*/
 
-/*購入完了画面（ユーザ）---------------------------------------------------------------*/
-.main {
-    margin-top: 60px;
+/*購入完了、商品詳細、商品追加、商品編集画面header共通--------------------------------------*/
+/*ショップトップへ戻るボタン*/
+.headerCenter {
+    display: flex;
+    position: relative;
 }
+.headerCenter h1 {
+    width: 60%;
+    color: #F0C61A;
+    text-align: left;
+    line-height: 100px;
+    padding-left: 60px;
+}
+.headerCenter .right-icon {
+    width: 40%;
+    padding: 0 10px;
+    text-align: right;
+}
+.right-icon img {
+    float: revert;
+    width: 100px;
+    height: 80px;
+}
+/*--------------------------------------------------------------------------*/
+
+/*購入完了画面（ユーザ）---------------------------------------------------------------*/
 .finish {
-    background: #EFEFEF;
+    background: #ffffff;
     height: 280px;
     width: 460px;
     margin: 0 auto;
 }
-.PurchaseCompletedText {
+.finish  p{
     text-align: center;
     font-size: 20px;
-    padding: 120px 0;
+    padding: 120px 0; 
 }
 
 /*----------------------------------------------------------------------------------*/
 
 /* 商品詳細画面 ----------------------------------------------------------------------*/
 
-/*ショップトップへ戻るボタン*/
-.right-icon {
-    float: right;
-    position: relative;
-    top: -16px;
-}
-.right-icon img {
-    float: revert;
-    width: 100px;
-    height: 76px;
-}
 /*商品詳細*/
-.productdetailList {
+.productDetailList {
     display: flex;
 }
 /*商品画像*/
@@ -377,7 +417,7 @@ a {
     margin: 0 20px;
     width: 50%;
 }
-.product-details img {
+.product-details-left img {
     width: 360px;
     height: 250px;
     float: right;
@@ -387,18 +427,49 @@ a {
     margin: 0 20px;
     width: 25%;
 }
+/*商品タイトル*/
 .product-details-right h3 {
+    font-size: 20px;
     text-align: left;
-    margin-bottom: 0;
+    margin: 5px 0 5px 0;
+}
+.itemDtail {
+    display: flex;
+    width: 100%;
+}
+/*購入ボタン*/
+.buyButton {
+    position: relative;
+    width: 50%;
+}
+.buyButton form {
+    width: 60%;
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+}
+#productBuyButton  {
+    width: 100%;
+    background: #F25C05;
+    color: #FFFFFF;
+    line-height: 2em;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 6px 6px 3px #666666;
+}
+.productLabel {
+    width: 50%;
+    margin: 0 auto;
 }
 /*商品価格*/
 .productPrice {
-    margin-top: 0px;
+    margin: 0;
     text-align: right;
     color: #BF2C2C;
 }
 /*累計販売数*/
 .numberOfSale {
+    margin-top: 5px;
     text-align: right;
 }
 .numberOfSale span {
@@ -409,37 +480,82 @@ a {
     text-align: left;
 }
 /*コメント*/
+.comment-list {
+    padding: 20px 0;
+}
 .comment-details {
     margin: 0 auto;
     margin-top: 20px;
-    width: 560px;
+    width: 40%;
     border-radius: 8%;
     background-color: #F2EEB3;
     box-shadow: 6px 6px 3px #666666;
     border-radius: 15px;
 }
-.comment-list {
-    padding: 20px 0;
-}
 .commentArea {
     padding: 5px 30px;
-}
-.commentArea ul {
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-}
-.commentArea li {
-    width: 50%;
 }
 .commentBody {
     text-align: left;
 }
+.commentAreaFoot {
+    display: flex;
+}
 .commentName {
+    width: 50%;
     color: #F2B705;
     text-align: left;
 }
-.commentData {
+.commentDate {
+    width: 50%;
     text-align: right;
+}
+/*コメント入力画面*/
+.comment-box {
+    padding: 20px 0;
+}
+.comment-box form {
+    width: 40%;
+    background: #f2b705;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+.itemMain {
+    padding: 20px 25px;
+}
+/*コメント入力*/
+.itemMain textarea {
+    width: 100%;
+    height: 90px;
+    border-radius: 8px;
+}
+.itemFoot {
+    display: flex;
+    margin-top: 10px;
+}
+/*名前*/
+.itemFoot .commentNameArea {
+    width: 80%;
+    text-align: left;
+}
+.itemFoot .commentNameArea input {
+    border-radius: 3px;
+    border: thin solid black;
+    width: 90%;
+    height: 20px;
+}
+/*送信ボタン*/
+.itemFoot .submitCommentArea {
+    width: 20%;
+    margin: 0 auto;
+}
+.itemFoot .submitCommentArea input {
+    width: 100%;
+    background: #F25C05;
+    color: #FFFFFF;
+    line-height: 2em;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 6px 6px 3px #666666;
 }
 /*---------------------------------------------------------------------------------*/
